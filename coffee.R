@@ -9,9 +9,9 @@ library(scales)
 start_of_year <- as.Date("2016-01-01") 
 start_day <- as.Date("2016-02-22")  # The day the coffee machine was installed (it's a Monday)
 today <- Sys.Date()
-coffee_data <- read_csv("data/coffee-machine-sample.csv")  # you're gonna need to set the working dir...
+coffee_data <- read_csv("data/coffee-machine-sample.csv")  # you're gonna need to set the working dir for this...
 
-# Create dataframe with a row for each game
+# Create dataframe with a row for each day
 date_origin <- "1970-01-01"
 day_range <- as.numeric(start_of_year, origin=date_origin):as.numeric(today, origin=date_origin)
 
@@ -43,7 +43,7 @@ status_by_day <- dates %>%
 
 head(status_by_day)
 
-# Get downtime estimates
+# Get downtime estimates from a certain date
 downtime_from_date <- function(downdate="2016-01-01") {
   downtime <- status_by_day %>% 
     filter(day >= as.Date(downdate)) %>% 
