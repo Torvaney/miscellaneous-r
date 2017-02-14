@@ -31,7 +31,7 @@ status_by_day <- dates %>%
                                ifelse(day >= start_day, FALSE, NA), TRUE),
          dd = lubridate::day(day),
          weekday = weekdays(as.Date(day), TRUE),
-         weekday_factor = factor(weekday, levels = c('Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun')),
+         weekday_factor = factor(weekday, levels = rev(c('Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'))),
          month_name = month(day, TRUE),
          month_number = month(day, FALSE),
          year = year(day),
