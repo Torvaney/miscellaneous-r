@@ -4,7 +4,10 @@ Miscellaneous and (mostly) self-contained R scripts
 ## Files
 
 ### make_footnote.R
- A small function for adding a footnote to (gg)plots in R.
+A small function for adding a footnote to (gg)plots in R.
+ 
+### to_clipboard.R
+Pipe a dataframe (or tibble or data_frame or ...) to the (unix) clipboard.
 
 ### coffee.R
 Plot the up/downtime of a coffee machine (or any other thing) in ggplot.
